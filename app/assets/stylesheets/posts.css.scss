@@ -1,0 +1,9 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$grayMediumLight: #eaeaea;
+#post_body{
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid $grayMediumLight;
+}

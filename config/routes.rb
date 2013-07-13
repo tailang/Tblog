@@ -1,4 +1,12 @@
 Tblog::Application.routes.draw do
+
+  devise_for :users
+
+  resources :posts
+
+  match '/archives', :to=> "posts#archives"
+  match '/index', :to => "staticpages#index"
+  root :to => 'staticpages#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

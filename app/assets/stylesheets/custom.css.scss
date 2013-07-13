@@ -1,0 +1,114 @@
+@import "bootstrap";
+
+$grayMediumLight: #eaeaea;
+$themecolor: #27ae60;
+
+@mixin box_sizing {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/*universal*/
+html{
+	overflow-y: scroll;
+}
+
+body{
+	padding: 60px;
+
+	font-family: "TheSerifRegular", "TheSerif", 
+	"Hiragino Sans GB", "STHeiti", "Microsoft YaHei", 
+	"微软雅黑", "WenQuanYi Zen Hei", "文泉驿正黑", 
+	"WenQuanYi Micro Hei", "文泉驿微米黑", "times new roman", 
+	"times", serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+	line-height: 1;     //设置行间距
+} 
+
+
+h1{
+	font-size: 3em;
+	letter-spacing: -2px;
+	margin-bottom: 30px;
+	//text-align: center;
+}
+
+h2{
+	font-size: 1.7em;
+	letter-spacing: -1px;
+	margin-bottom: 30px;
+	//text-align: center;
+	font-weight: normal;
+	//color: #999;
+}
+
+h3{
+	font-size: 1.1em;
+	letter-spacing: -1px;
+	margin-bottom: 20px;
+	//text-align: center;
+	font-weight: normal;
+	//color: #999;
+}
+p{
+	font-size: 1.1em;
+	line-height: 1.7em;
+}
+
+
+small{
+	font-size: 0.5em;
+}
+
+/* header */
+#logo {
+	float: left;
+	margin-right: 30px;
+	font-size: 2em;
+	color: $themecolor;
+	//text-transform: uppercase;
+	letter-spacing: -1px;
+	padding-top: 9px;
+	font-weight: bold;
+	line-height: 1;
+	&:hover{
+		color: $themecolor;
+		text-decoration: none;
+	}
+}
+
+/*footer*/
+footer{
+	margin-top: 45px;
+	margin-bottom: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-top: 1px solid $grayMediumLight;
+	color: $grayLight;
+}
+
+.devise-help{
+	margin-bottom: 20px;
+	padding-bottom: 0px;
+	border-bottom: 1px solid $grayMediumLight;
+	h2{
+		font-size: 1.4em;
+	    letter-spacing: -1px;
+	    margin-bottom: 20px;
+	    font-weight: normal;
+	}
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+	border: 1px solid #bbb;
+	width: 75%;
+	padding: 10px;
+	height: auto !important;
+	margin-bottom: 15px;
+	@include box_sizing;
+}
+

@@ -1,0 +1,24 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+  	<div class="container">
+  	  <a id="logo" href="/index">Tblog</a>
+  	  <nav>
+  	  	 <ul class="nav pull-left">
+  	  	<li><%= link_to "博文首页", posts_path%></li>
+  	  	<li><%= link_to "博文列表", '/archives' %></li>
+  	  </ul>
+
+  	  <ul class="nav pull-right">
+        <li><%= link_to '创建博文', new_post_path %></li>
+        <% if user_signed_in? %>
+        <li><a href="#"><%= current_user.username %></a></li>
+        <li><%= link_to '退出', destroy_user_session_path, :method => :delete %></li>  
+        <% else %>    
+  	  	  <li><%= link_to '登录', new_user_session_path %></li>
+  	  	  <li><%= link_to '注册', new_user_registration_path %></li>
+        <% end -%>
+  	  </ul>
+  	  </nav>
+  	</div>
+  </div>
+</header>
