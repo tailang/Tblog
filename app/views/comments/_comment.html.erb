@@ -1,0 +1,9 @@
+
+<%= comment.user.username %><br>
+<%= comment.comment %><br>
+<br>
+<p>
+  <%= link_to '删除', [comment.commentable, comment],
+               :method => :delete,
+               :confirm => "确定删除吗?"  %>
+</p>

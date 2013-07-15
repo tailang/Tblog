@@ -1,0 +1,6 @@
+<% @comment ||= @post.comments.build %>
+  <%= form_for([@comment.commentable, @comment]) do |f| %>
+  <%= f.label :comment, "添加回应" %>
+  <%= f.text_area :comment %><br>
+  <%= f.submit %>
+<% end -%>

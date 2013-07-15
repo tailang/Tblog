@@ -10,18 +10,9 @@
       <%= link_to '修改', edit_post_path(@post) %>
       <%= link_to '删除', post_path(@post), :method => :delete, :confirm => "确定删除吗?" %> <br>
 
-      <% @post.comments.each do |comment| %>
-     <%= comment.user.username %><br>
-     <%= comment.comment %><br>
-      <% end -%>
+      <%= render @post.comments %>
 
-
-      <% @comment ||= @post.comments.build %>
-      <%= form_for([@comment.commentable, @comment]) do |f| %>
-     <%= f.label :comment, "添加回应" %>
-     <%= f.text_area :comment %><br>
-     <%= f.submit %>
-      <% end -%>
+      <%= render 'comments/form' %>
 	</div>
 
 	<div class="span3">
