@@ -1,6 +1,6 @@
 
 <%= comment.user.username %><br>
-<%= comment.comment %><br>
+<%= markdown(comment.comment) %><br>
 <br>
 <p>
   <%= link_to '删除', [comment.commentable, comment],

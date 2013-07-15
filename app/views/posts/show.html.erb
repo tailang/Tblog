@@ -6,8 +6,8 @@
         标签：<%= raw @post.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %>
       </p>
 
-      <p class="text-center">
-        <%= @post.body %>
+      <p>
+        <%= markdown(@post.body) %>
       </p>
 
       <%= link_to '修改', edit_post_path(@post) %>

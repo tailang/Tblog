@@ -143,6 +143,14 @@ zh:
 
   activerecord:
     modules:
+      post: 博文
+    attributes:
+      post:
+        title: 文章标题
+        body: 文章内容
+
+  activerecord:
+    modules:
       user: 用户
     attributes:
       user:

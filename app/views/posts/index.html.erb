@@ -5,7 +5,9 @@
 
     <h2><%= link_to post.title, post_path(post) %></h2>
     <div id="post_body">
-      <p class="text-center"><%= post.body %></p>
+      <p>
+        <%= markdown(post.body) %>
+      </p>
 
       <p>
       	标签：<%= raw post.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %>

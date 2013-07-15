@@ -3,4 +3,6 @@ class Post < ActiveRecord::Base
   acts_as_taggable
   acts_as_commentable
   default_scope :order => 'id DESC'
+  validates :title, :presence => true
+  validates :body, :presence => true
 end

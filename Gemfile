@@ -38,3 +38,7 @@ gem 'devise', '~> 2.2.4'
 gem 'cancan', '~> 1.6.10'
 gem 'acts_as_commentable', '3.0.1'
 gem 'acts-as-taggable-on'
+
+#markdown
+gem 'redcarpet'
+gem 'coderay'
