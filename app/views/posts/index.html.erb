@@ -1,7 +1,7 @@
 <% provide(:title, "博文首页") %>
 <div class="row">
-<div class="span9">
-<% @posts.each do |post| %>
+  <div class="span8">
+    <% @posts.each do |post| %>
 
     <h2><%= link_to post.title, post_path(post) %></h2>
     <div id="post_body">
@@ -16,12 +16,12 @@
       <%= link_to '修改', edit_post_path(post) %>
       <%= link_to '删除', post, method: :delete, data: { confirm: '确定要删除吗?' } %>    -->
     </div> 
-<% end %>
-</div>
+    <% end %>
+  </div>
 
-<div class="span3">
- <%= render 'shared/tags' %>
-</div>
+  <div class="span4">
+   <%= render 'shared/tags' %>
+ </div>
 </div>
 <br />
 

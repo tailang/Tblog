@@ -1,6 +1,13 @@
-<% @comment ||= @post.comments.build %>
+<% if user_signed_in? %>
+  <% @comment ||= @post.comments.build %>
   <%= form_for([@comment.commentable, @comment]) do |f| %>
-  <%= f.label :comment, "添加回应" %>
-  <%= f.text_area :comment %><br>
-  <%= f.submit %>
+
+    <%= f.label :comment, "添加回应" %>
+    <%= f.text_area :comment %><br>
+    <%= f.submit %>
+  <% end -%>
+
+<% else %>
+
+  <%= link_to "登录后可以添加评论", new_user_session_path %>
 <% end -%>

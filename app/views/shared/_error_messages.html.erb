@@ -1,6 +1,7 @@
 <% if object.errors.any? %>
-    <!-- <div id="error_explanation"> -->
-      <div class="alert alert-error">
+  <div id="error_explanation">
+    <div class="alert alert-error">
+      <!-- The form contains <%= pluralize(object.errors.count, "error") %> -->
       <button type="button" class="close" data-dismiss="alert">&times;</button>
       <p><strong>有<%= object.errors.count%>个错误导致操作失败:</strong> </p>
       <ul>
@@ -10,6 +11,7 @@
       </li>
       <% end %>
     </ul>
-  <!-- </div> -->
     </div>
+    
+  </div>
 <% end %>

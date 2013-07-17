@@ -2,59 +2,56 @@
 
 <div class="row">
   <div class="span9">
-   <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => "form-horizontal"}) do |f| %>
-   <div class="devise-help">
-     <h2>注册新用户</h2>
-   </div>  
-  <%= render 'shared/error_messages', object: f.object %>
-  <div class="control-group">
-    <div class="control-label">
-      <%= f.label :username, "用户名" %>
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => "form-horizontal"}) do |f| %>
+    <div class="devise-help">
+      <h2>注册新用户</h2>
+    </div>  
+    <%= render 'shared/error_messages', object: f.object %>
+    <div class="control-group">
+      <div class="control-label">
+        <%= f.label :username, "用户名" %>
+      </div>
+      <div class="controls">
+        <%= f.text_field :username,autofocus: true%>
+        <p>用户名不可修改，请谨慎填写，最多16个字符</p>
+      </div>
     </div>
-    <div class="controls">
-      <%= f.text_field :username,autofocus: true%>
-      <p>用户名不可修改，请谨慎填写，最多16个字符</p>
-    </div>
-  </div>
 
-  <div class="control-group">
-    <div class="control-label">
-      <%= f.label :email, "邮箱" %>
+    <div class="control-group">
+      <div class="control-label">
+        <%= f.label :email, "邮箱" %>
+      </div>
+      <div class="controls">
+        <%= f.email_field :email%>
+        <p>请填写您常用的邮箱，以后不可修改</p>
+      </div>
     </div>
-    <div class="controls">
-    <%= f.email_field :email%>
-    <p>请填写您常用的邮箱，以后不可修改</p>
+    
+    <div class="control-group">
+      <div class="control-label">
+        <%= f.label :password, "密码" %>
+      </div>
+      <div class="controls">
+        <%= f.password_field :password %>
+        <p>密码不少于8个字符</p>
+      </div>
     </div>
-  </div>
-  
-  <div class="control-group">
-    <div class="control-label">
-      <%= f.label :password, "密码" %>
+
+    <div class="control-group">
+      <div class="control-label">
+        <%= f.label :password_confirmation, "密码验证" %>
+      </div>
+      <div class="controls">
+        <%= f.password_field :password_confirmation %>
+      </div>
     </div>
-    <div class="controls">
-      <%= f.password_field :password %>
-      <p>密码不少于8个字符</p>
-    </div>
-  </div>
- 
-  <div class="control-group">
-    <div class="control-label">
-      <%= f.label :password_confirmation, "密码验证" %>
-    </div>
-    <div class="controls">
-      <%= f.password_field :password_confirmation %>
-    </div>
-  </div>
-  
-  <div class="control-group">
-    <div class="controls">
+    
+    <div class="control-group">
+      <div class="controls">
        <%= f.submit "创建用户", class: "btn btn-primary" %>
        <%= render "devise/shared/links" %>
-    </div>
-  </div>
-<% end %>
-
-
-
-  </div>
+     </div>
+   </div>
+   <% end %>
+ </div>
 </div>
