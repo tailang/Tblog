@@ -4,5 +4,5 @@
 <p>
   <%= link_to '删除', [comment.commentable, comment],
                :method => :delete,
-               :confirm => "确定删除吗?"  %>
+               :confirm => "确定删除吗?" if comment.user == current_user or current_user.id == 1 %>
 </p>

@@ -36,9 +36,9 @@ h1{
 }
 
 h2{
-	font-size: 1.7em;
+	font-size: 1.9em;
 	letter-spacing: -1px;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 	//text-align: center;
 	font-weight: normal;
 	//color: #999;
@@ -52,15 +52,24 @@ h3{
 	font-weight: normal;
 	//color: #999;
 }
+
+h4{
+	font-size: 0.9em;
+	letter-spacing: -1px;
+	margin-bottom: 20px;
+	//text-align: center;
+	font-weight: normal;
+	//color: #999;
+}
 p{
 	font-size: 1.1em;
 	line-height: 1.7em;
 }
 
 a{
- 	color: $themecolor;
+
  	&:hover {
-			
+			text-decoration: none;
 		}
  }
 

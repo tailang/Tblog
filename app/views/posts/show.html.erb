@@ -9,10 +9,10 @@
       <p>
         <%= markdown(@post.body) %>
       </p>
-
+      <% if admin? %>
       <%= link_to '修改', edit_post_path(@post) %>
       <%= link_to '删除', post_path(@post), :method => :delete, :confirm => "确定删除吗?" %> <br>
-
+      <% end -%>
       <%= render @post.comments %>
 
       <%= render 'comments/form' %>

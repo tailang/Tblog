@@ -35,7 +35,7 @@ gem 'bootstrap-sass', '~> 2.3.2'
 gem 'will_paginate', '~> 3.0.4'
 gem 'bootstrap-will_paginate', '~> 0.0.9'
 gem 'devise', '~> 2.2.4'
-gem 'cancan', '~> 1.6.10'
+# gem 'cancan', '~> 1.6.10'
 gem 'acts_as_commentable', '3.0.1'
 gem 'acts-as-taggable-on'
 

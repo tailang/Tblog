@@ -1,5 +1,8 @@
 #encoding: utf-8
 class PostsController < ApplicationController
+  include ApplicationHelper
+  before_filter :authenticate_user!, except: [:index, :show, :archives]
+  before_filter :admin_user, except: [:index, :show, :archives]
   # GET /posts
   # GET /posts.json
   def index

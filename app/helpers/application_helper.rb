@@ -1,3 +1,4 @@
+#encoding: utf-8
 module ApplicationHelper
 	def full_title(page_title)
 		base_title = 'Tblog'
@@ -7,6 +8,19 @@ module ApplicationHelper
 			page_title
 		end
 	end
+  
+ 
+  def admin?
+    if user_signed_in?
+      current_user.id == 1  
+    end
+  end
+
+  def admin_user
+    unless admin?
+      redirect_to root_path, notice: "你没有该权限"
+    end
+  end
 
   def markdown(text)
     options = {   
