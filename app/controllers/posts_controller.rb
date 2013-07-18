@@ -6,12 +6,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    if params[:tag]
-      @posts = Post.tagged_with(params[:tag])
-    else
-      @posts = Post.all
-    end
-
+      @posts = Post.paginate(:page => params[:page], :per_page => 5)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
@@ -90,6 +85,10 @@ class PostsController < ApplicationController
   end
 
   def archives
-    @posts = Post.all
+    if params[:tag]
+      @posts = Post.tagged_with(params[:tag])
+    else
+      @posts = Post.all
+    end
   end
 end

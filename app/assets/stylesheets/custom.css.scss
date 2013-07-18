@@ -45,7 +45,7 @@ h2{
 }
 
 h3{
-	font-size: 1.1em;
+	font-size: 1.2em;
 	letter-spacing: -1px;
 	margin-bottom: 20px;
 	//text-align: center;
@@ -67,11 +67,12 @@ p{
 }
 
 a{
-
- 	&:hover {
-			text-decoration: none;
-		}
- }
+	color: #4c5239;
+	&:hover {
+		color: $themecolor;
+		text-decoration: none;
+	}
+}
 
 small{
 	font-size: 0.5em;
@@ -129,11 +130,11 @@ input, textarea, select, .uneditable-input {
 
 /*tags could*/
 #tag_cloud {
-	width: 200px;
+	width: 190px;
 	line-height: 1.2em;
-	.s { font-size: 0.4em; }
-	.m { font-size: 0.8em; }
-	.l { font-size: 1.4em; }
+	.s { font-size: 15px; }
+	.m { font-size: 15px; }
+	.l { font-size: 15px; }
 }
 
 /*errors*/

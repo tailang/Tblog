@@ -1,8 +1,25 @@
-<%= comment.user.username %><br>
-<%= markdown(comment.comment) %><br>
-<br>
-<p>
-  <%= link_to '删除', [comment.commentable, comment],
+<div class="comment-item">
+	    <div class="user-face">		
+        <%= image_tag("user.png") %>
+        </div>
+
+        <div class="infos">
+        	<div class="info">
+			  <span class="name"><%= comment.user.username %></span>
+			  <%= comment.created_at %>
+		    </div>
+            
+		    <div class="reply-doc">
+			<%= markdown(comment.comment) %>
+			<span class="opts">
+				<%= link_to '删除', [comment.commentable, comment],
                :method => :delete,
-               :confirm => "确定删除吗?" if comment.user == current_user or current_user.id == 1 %>
-</p>
+               :confirm => "确定删除吗?" if user_signed_in? and (comment.user == current_user or current_user.id == 1) %>
+			</span>
+            </div>
+        </div>
+		
+</div>
+
+
+  

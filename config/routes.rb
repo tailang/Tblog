@@ -6,7 +6,7 @@ Tblog::Application.routes.draw do
     resources :comments
   end
   
-  get 'tags/:tag', to: 'posts#index', as: :tag
+  get 'tags/:tag', to: 'posts#archives', as: :tag
   match '/archives', :to=> "posts#archives"
   match '/index', :to => "staticpages#index"
   root :to => 'staticpages#index'

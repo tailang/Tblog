@@ -2,23 +2,35 @@
 <div class="row">
 	<div class="span9">
 	  <h2><%= @post.title %></h2>
-      <p>
-        标签：<%= raw @post.tag_list.map { |t| link_to t, tag_path(t)}.join(', ') %>
-      </p>
-
-      <p>
+      <div class="post_body">
         <%= markdown(@post.body) %>
-      </p>
-      <% if admin? %>
-      <%= link_to '修改', edit_post_path(@post) %>
-      <%= link_to '删除', post_path(@post), :method => :delete, :confirm => "确定删除吗?" %> <br>
+        <% if admin? %>
+        <%= link_to '修改', edit_post_path(@post) %>
+        <%= link_to '删除', post_path(@post), :method => :delete, :confirm => "确定删除吗?" %> <br>
       <% end -%>
-      <%= render @post.comments %>
-
-      <%= render 'comments/form' %>
+      </div>
+      
+      <%= render @post.comments %><br>
+      <div class="comment-area">
+        <%= render 'comments/form' %>
+      </div>
 	</div>
 
 	<div class="span3">
-		here is sides
+		<div class="well">
+      <h3>当前博文:</h3>
+      <%= render 'shared/current_posts' %>
+    </div>
+
+    <div class="well">
+      <h4>标签:</h4>
+      <%= render 'shared/tags' %>
+    </div>
+    
+    <div class="well">
+      <h4>最新评论 :</h4>
+       <%= render 'shared/new_comments' %>
+    </div>
+ </div>
 	</div>
 </div>

@@ -4,7 +4,7 @@
 
   
   <div class="field">
-    <%= f.label :title %><br />
+    <%= f.label :title, "标题" %>
     <%= f.text_field :title %>
   </div>
 
@@ -14,12 +14,13 @@
   </div>
 
   <div class="field">
-    <%= f.label :body %><br />
+    <%= f.label :body, "正文" %>
     <%= f.text_area :body %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "发布", class: "btn btn-info" %>
+    <%= link_to '撤销', posts_path, class: "btn" %>
   </div>
   
 <% end %>

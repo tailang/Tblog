@@ -42,3 +42,4 @@ gem 'acts-as-taggable-on'
 #markdown
 gem 'redcarpet'
 gem 'coderay'
+
