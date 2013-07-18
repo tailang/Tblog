@@ -30,13 +30,13 @@ $grayMediumLight: #eaeaea;
 
 .info{
 	font-size: 12px;
-    color: #bbb;
-    height: 20px;
+	color: #bbb;
+	height: 20px;
 
-    .name{
-    	font-size: 14px;
-    	color: $themecolor;
-    }
+	.name{
+		font-size: 14px;
+		color: $themecolor;
+	}
 }
 .reply-doc{
 
@@ -47,7 +47,6 @@ $grayMediumLight: #eaeaea;
 		position: relative;
 		right: 10px;
 		bottom: 10px;
-        // text-align: right;
 	}
 }
 

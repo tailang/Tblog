@@ -1,4 +1,3 @@
-
 <% if user_signed_in? %>
   <% @comment ||= @post.comments.build %>
   <%= form_for([@comment.commentable, @comment]) do |f| %>
