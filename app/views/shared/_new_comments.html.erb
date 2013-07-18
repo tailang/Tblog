@@ -1,5 +1,5 @@
  <% Comment.limit(5).all.each do |comment| %>
-   <p class="aside-comment"><span><%= comment.user.username %></span>: <%= markdown(comment.comment) %></p>
+   <div class="aside-comment"><span><%= comment.user.username %></span>: <%= markdown(comment.comment) %></div>
  <% end -%>
  ......
    
