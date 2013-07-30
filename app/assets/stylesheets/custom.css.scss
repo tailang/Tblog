@@ -1,7 +1,7 @@
 @import "bootstrap";
 
 $grayMediumLight: #eaeaea;
-$themecolor: #27ae60;
+$themecolor: #41a7c5;
 
 @mixin box_sizing {
 	-moz-box-sizing: border-box;
@@ -83,14 +83,14 @@ small{
 	float: left;
 	margin-right: 30px;
 	font-size: 2em;
-	color: $themecolor;
+	color: #ffffff;
 	//text-transform: uppercase;
 	letter-spacing: -1px;
 	padding-top: 9px;
 	font-weight: bold;
 	line-height: 1;
 	&:hover{
-		color: $themecolor;
+		color: #ffffff;
 		text-decoration: none;
 	}
 }

@@ -13,8 +13,20 @@
   	  <ul class="nav pull-right">
         <li><%= link_to '创建博文', new_post_path if admin? %></li>
         <% if user_signed_in? %>
-        <li><a href="#"><%= current_user.username %></a></li>
-        <li><%= link_to '退出', destroy_user_session_path, :method => :delete %></li>  
+        <li id="fat-menu" class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <%= current_user.username %> <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "我的主页", current_user %></li>
+            <li class="divrder"></li>
+            <li>
+              <%= link_to '退出', destroy_user_session_path, :method => :delete %>
+            </li>
+          </ul>
+        </li>
+        
+          
         <% else %>    
   	  	  <li><%= link_to '登录', new_user_session_path %></li>
   	  	  <li><%= link_to '注册', new_user_registration_path %></li>
