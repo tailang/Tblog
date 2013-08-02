@@ -1,0 +1,18 @@
+<%= form_for @user, :html => {:multipart => true} do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+  	<%= image_tag(@user.avatar_url(:large)) if @user.avatar %> <br>
+  	<%= f.file_field :avatar %>
+  	<%= f.hidden_field :avatar_cache %>
+  </div>
+
+  <div class="field">
+  	<%= f.label :username, "用户名" %>
+  	<%= f.text_field :username %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "修改", class: "btn btn-info" %>
+    <%= link_to '撤销', posts_path, class: "btn" %>
+  </div>
+<% end %>

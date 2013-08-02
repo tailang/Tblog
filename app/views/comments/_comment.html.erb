@@ -1,11 +1,11 @@
 <div class="comment-item">
   <div class="user-face">		
-    <%= image_tag("user.png") %>
+    <%= link_to  image_tag(comment.user.avatar_url(:normal)) , user_path(comment.user)  %>
   </div>
 
   <div class="infos"> 
     <div class="info">
-	  <span class="name"><%= comment.user.username %></span>
+	  <span class="name"><%=link_to comment.user.username, user_path(comment.user) %></span>
 	  <%= comment.created_at %>
     </div>
             

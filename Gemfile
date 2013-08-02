@@ -16,22 +16,6 @@ end
 
 gem 'jquery-rails'
 
-
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
 gem 'bootstrap-sass', '~> 2.3.2'
 gem 'will_paginate', '~> 3.0.4'
 gem 'bootstrap-will_paginate', '~> 0.0.9'
@@ -39,7 +23,8 @@ gem 'devise', '~> 2.2.4'
 # gem 'cancan', '~> 1.6.10'
 gem 'acts_as_commentable', '3.0.1'
 gem 'acts-as-taggable-on'
-
+gem 'carrierwave', '0.6.2'
+gem 'mini_magick'
 #markdown
 gem 'redcarpet'
 gem 'coderay'

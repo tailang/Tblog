@@ -19,6 +19,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><%= link_to "我的主页", current_user %></li>
+            <li><%= link_to "帐号设置", edit_user_path(current_user) %></li>
             <li class="divrder"></li>
             <li>
               <%= link_to '退出', destroy_user_session_path, :method => :delete %>
