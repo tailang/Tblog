@@ -8,11 +8,10 @@ module ApplicationHelper
 			page_title
 		end
 	end
-  
  
   def admin?
     if user_signed_in?
-      current_user.id == 1  
+      current_user.id == 1 or current_user.role == "admin"
     end
   end
 

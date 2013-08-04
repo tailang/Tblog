@@ -1,2 +1,16 @@
-<%= image_tag(@user.avatar_url(:big)) %>
-<%= @user.username %>
+<%= image_tag(@user.avatar_url(:big)) %><br>
+<%= @user.username %><br>
+<h3><%= @user.username %>的评论：</h3>
+<% @user.comments.each do |comment| %>
+  <div class="post_title_archives">
+  	<div class="meta">
+  		<%= comment.created_at %><br>
+
+  	<% if admin? or @user == current_user %>
+      <%= link_to '删除', [comment.commentable, comment], method: :delete, data: { confirm: '确定要删除吗?' } %>
+    <% end -%>
+  	</div>
+    <%= comment.comment %><br>
+  </div>
+<% end %>
+

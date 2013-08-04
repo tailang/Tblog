@@ -1,3 +1,4 @@
+<h4>最新评论:</h4>
  <% Comment.limit(10).all.each do |comment| %>
    <div class="aside-comment">
    	<%= image_tag(comment.user.avatar_url(:small)) %>

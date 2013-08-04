@@ -1,3 +1,4 @@
+<h4>当前博文:</h4>
 <% Post.limit(5).each do |post| %>
     <i class="icon-bookmark"></i><%= link_to post.title, post %><br>
  <% end -%>
