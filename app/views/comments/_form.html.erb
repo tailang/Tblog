@@ -3,7 +3,7 @@
   <%= form_for([@comment.commentable, @comment]) do |f| %>
 
     <%= f.label :comment, "添加回应" %>
-    <%= f.text_area :comment %><br>
+    <%= f.text_area :comment, cols: 25, rows: 5 %><br>
     <%= f.submit "提交", class: "btn btn-info"%>
   <% end -%>
 

@@ -5,15 +5,15 @@
   
   <div class="field">
     <%= f.label :title, "标题" %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :size => 10 %>
   </div>
 
   <div class="field">
     <%= f.label :tag_list, "标签" %>
-    <%= f.text_field :tag_list %>
+    <%= f.text_field :tag_list, :size => 10 %>
   </div>
 
-  <div class="field">
+  <div class="field" >
     <%= f.label :body, "正文" %>
     <%= f.text_area :body %>
   </div>
