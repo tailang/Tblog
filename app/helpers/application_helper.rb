@@ -39,5 +39,9 @@ module ApplicationHelper
       CodeRay.scan(code, language).div(:tab_width=>2)
     end
   end
-
+  
+  def safe(html)
+    return "" if html.nil? or html.blank?
+    html.html_safe
+  end
 end

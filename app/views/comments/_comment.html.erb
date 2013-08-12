@@ -10,7 +10,7 @@
     </div>
             
     <div class="reply-doc">
-	  <%= markdown(comment.comment) %>
+	  <%= safe comment.comment %>
 	  <span class="opts">
 		<%= link_to '删除', [comment.commentable, comment],
                     :method => :delete,

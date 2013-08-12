@@ -10,7 +10,7 @@
       <%= link_to '删除', [comment.commentable, comment], method: :delete, data: { confirm: '确定要删除吗?' } %>
     <% end -%>
   	</div>
-    <%= comment.comment %><br>
+    <%= safe comment.comment %><br>
   </div>
 <% end %>
 

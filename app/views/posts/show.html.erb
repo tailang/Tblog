@@ -3,7 +3,7 @@
 	<div class="span9">
 	  <h2><%= @post.title %></h2>
       <div class="post_body">
-        <%= markdown(@post.body) %>
+        <%= safe @post.body %>
         <% if admin? %>
         <%= link_to '修改', edit_post_path(@post) %>
         <%= link_to '删除', post_path(@post), :method => :delete, :confirm => "确定删除吗?" %> <br>

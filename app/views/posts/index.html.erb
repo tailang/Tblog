@@ -10,7 +10,7 @@
     </h4>
     <div class="post_body">
       <p>
-        <%= markdown(post.body) %>
+        <%= safe post.body %>
       </p>
 
       <% if admin? %>

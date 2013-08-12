@@ -15,7 +15,7 @@
 
   <div class="field" >
     <%= f.label :body, "正文" %>
-    <%= f.text_area :body %>
+    <%= f.kindeditor :body, :simple_mode => true, :owner_id => @post.id, :width => 700, :height => 400 %><br>
   </div>
 
   <div class="actions">

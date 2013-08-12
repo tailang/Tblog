@@ -32,3 +32,5 @@ gem 'mini_magick'
 gem 'redcarpet'
 gem 'coderay'
 
+gem 'rails_kindeditor', '~> 0.4.0'
+
