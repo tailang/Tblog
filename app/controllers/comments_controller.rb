@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     @comment.user = current_user #当前用户
 
     if @comment.save
-      redirect_to commentable_record, notice: '创建评论成功'
+        redirect_to commentable_record, notice: '创建评论成功'
     else
       redirect_to commentable_record, notice: '创建评论失败'
     end

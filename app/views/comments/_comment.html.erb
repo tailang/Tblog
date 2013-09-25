@@ -8,9 +8,9 @@
 	  <span class="name"><%=link_to comment.user.username, user_path(comment.user) %></span>
 	  <%= comment.created_at %>
     </div>
-            
+          
     <div class="reply-doc">
-	  <%= safe comment.comment %>
+    <%= safe comment.comment %>
 	  <span class="opts">
 		<%= link_to '删除', [comment.commentable, comment],
                     :method => :delete,

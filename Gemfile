@@ -10,6 +10,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :development do
+  gem 'pry-rails'
+end
 gem 'jquery-rails'
 
 gem 'bootstrap-sass', '~> 2.3.2'
@@ -18,7 +21,7 @@ gem 'bootstrap-will_paginate', '~> 0.0.9'
 
 #login/logout
 gem 'devise', '~> 2.2.4'
-# gem 'cancan', '~> 1.6.10'
+
 
 #acts_as
 gem 'acts_as_commentable', '3.0.1'

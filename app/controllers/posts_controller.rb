@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   before_filter :admin_user, except: [:index, :show, :archives]
   # GET /posts
   # GET /posts.json
+
   def index
     @posts = Post.paginate(:page => params[:page], :per_page => 5)
     

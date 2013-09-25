@@ -3,7 +3,7 @@
   <%= form_for([@comment.commentable, @comment]) do |f| %>
 
     <%= f.label :comment, "添加回应" %>
-    <%= f.kindeditor :comment, :simple_mode => true, :owner_id => @comment.id, :width => 700, :height => 200 %><br>
+    <%= f.kindeditor :comment, :items => ['image', 'link'], :owner_id => @comment.id, :width => 700, :height => 200 %><br>
     <%= f.submit "提交", class: "btn btn-info"%>
   <% end -%>
 
